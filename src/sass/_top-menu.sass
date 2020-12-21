@@ -1,0 +1,70 @@
+.top-menu
+	background: $black
+	position: relative
+
+@import navigation
+
+
+		
+.modal-login
+	display: none
+	position: fixed
+	z-index: 999
+	width: 100vw
+	height: 100vh
+	background: rgba($black, .3)
+	&.show
+		display: block
+
+.log-popup
+	max-width: 460px
+	margin: 125px auto 0 auto
+	background: $white
+	z-index: 9999
+	+xs-block
+		width: 90vw
+	&__window
+		padding: 45px 80px/460px*100% 42px 80px/460px*100%
+
+		+xs-block
+			padding: 35px-5px 30px/460px*100% 32px-5px 30px/460px*100%
+		// padding: 45px 80px 42px 80px
+	&__form
+		display: flex
+		flex-direction: column
+	// .popup__title
+	&__title
+		margin-bottom: 28px
+		+md-block
+			margin-bottom: 20px
+			font-size: $heading-2
+	// .popup__text
+	&__text
+		margin-bottom: 16px
+
+	// .popup__login
+	&__login
+		margin-bottom: 9px
+		background-image: url('../imges/svg/user.svg')
+		background-repeat: no-repeat
+		background-position: 96% 50%
+		padding-right: 30px
+
+	// .popup__password
+	&__password
+		margin-bottom: 15px
+		background-image: url('../imges/svg/lock.svg')
+		background-repeat: no-repeat
+		background-position: 96% 50%
+		padding-right: 30px
+	// .popup__submit
+	&__submit
+		margin-bottom: 10px
+
+	&__closer
+		+md-block
+			right: 20px
+			top: 20px
+			background: url('../imges/svg/cross-black.svg') 0 0 / cover no-repeat
+			width: 30px
+			height: 30px

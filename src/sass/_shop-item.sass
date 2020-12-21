@@ -1,0 +1,138 @@
+.good-page__wrapper
+	+row-flex()
+	justify-content: space-between
+	flex-wrap: wrap
+	+md-block
+		padding: 0 15px
+.good-slider
+	// +col
+	+size(6)
+	margin-bottom: 30px
+	position: relative
+	+md-block
+		+size(6)
+		margin: 0 auto
+	+sm-block
+		+size(10)	
+	+xs-block
+		+size(12)
+
+
+
+.slider-for
+	background: #fff
+	margin-bottom: 15px
+	box-shadow: 0px 0px 7px 1px lighten($grey, 15)
+.slider-nav
+	position: relative
+	&:before, &:after
+		content: ('')
+		display: block
+		height: calc(100% - 10px)
+		position: absolute
+		top: 5px
+		width: 0px
+		z-index: -9
+		box-shadow: -1px 0px 5px 1px lighten($grey,15)
+		+sm-block
+			display: none
+	&:before
+		left: -1px
+	&:after
+		right: -1px
+		box-shadow: 1px 0px 5px 1px lighten($grey,15)
+
+	&__item
+		max-width: 133px
+		margin-left: 10px
+		margin-right: 10px
+		box-shadow: 0px 0px 5px 1px lighten($grey, 15)
+	// 	cursor: pointer
+.slider-nav .slick-list
+	padding: 5px 0
+	+sm-block
+		margin-bottom: 40px
+
+	// background: #000
+.good-info
+	// +col
+	+size(6)
+	display: flex
+	justify-content: flex-end
+	+md-block
+		+size(5)
+		justify-content: center
+		margin: 0 auto
+	+sm-block
+		+size(12)
+	&-wrapper
+		width: 400px
+		display: flex
+		flex-direction: column
+		justify-content: center
+		+md-block
+			width: 100%
+
+.stock-block
+	display: flex
+	justify-content: space-between
+	margin-bottom: 40px
+.stock-item
+	@extend .text
+.artikul
+	@extend .text
+	color: $grey
+
+.descr-block
+
+	@extend .text
+	margin-bottom: 41px
+	// .descr-block__text
+	&__text
+		font-weight: bold
+
+	// .descr-block__name
+	&__name
+
+.info-btns
+	margin: 0
+	padding: 0
+	justify-content: flex-start
+	margin-bottom: 67px
+	+sm-block
+		order: 4
+		margin-bottom: 67px
+		justify-content: center
+	+xs-block
+		justify-content: center
+	&_price
+		text-decoration: none
+		font-size: 16px
+		&:after, &:before
+			display: none
+
+.info-equipment
+	width: 100%
+	+sm-block
+		width: 100%
+	+xs-block
+		margin: 0 auto
+		margin-bottom: 45px
+	// .info-equipment__title
+	&__title
+		width: 100%
+		margin-bottom: 38px
+		+sm-block
+			margin-bottom: 28px
+
+	// .info-equipment__list
+	&__list
+		width: 100%
+		margin: 0 auto
+		+xs-block
+			align-items: center	
+				
+	
+	// .info-equipment__item
+	&__item
+		margin-bottom: 15px

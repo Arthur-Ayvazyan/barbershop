@@ -1,0 +1,347 @@
+.main-index 
+	padding: 160px 0 65px
+	background: rgba(0, 0, 0, .9) url('../imges/background/index-bg.jpg') 0 0 / cover no-repeat
+	+sm-block
+		padding-bottom: 1px  
+.index-logo
+	max-width: 371px
+	margin: 0 auto
+	margin-bottom: 76px	
+	+xs-block
+		max-width: 271px
+		// margin-bottom: 45px		
+
+
+
+.advantage-block
+	+row-flex
+	justify-content: space-between
+	margin-bottom: 25px
+	+md-block
+		justify-content: center
+
+.advantage
+	+size(4)
+	+size-md(6)
+	+size-xs(12)
+	margin-bottom: 60px
+	color: #f7f4f1
+	// .advantage__title
+	&__title
+		text-transform: uppercase
+		text-align: center
+		font-size: $heading-1
+		margin-bottom: 16px
+	// .advantage__icon
+	&__icon
+		display: block
+		width: 21px
+		height: 21px
+		margin: 0 auto 
+		background: #f7f4f1
+		transform: rotate(45deg)
+		margin-bottom: 31px
+	// .advantage__text
+	&__text
+		text-align: center
+		max-width: 255px
+		margin: 0 auto
+		font-size: 14px
+		line-height: 24px
+		+xs-block
+			max-width: 300px
+
+
+
+
+
+
+
+.info
+	position: relative
+	+xs-block
+		text-align: center
+.map-modal
+	display: none
+	position: absolute
+	left: 0
+	top: -30px
+	z-index: 9
+	width: 100%
+	+xs-block
+		position: fixed
+		top: 50px
+	&.show
+		display: block
+		overflow: visible
+	&__closer
+		top: -3px
+		width: 20px
+		height: 20px
+.map-popup
+	margin: 0 auto
+	max-width: 790px
+	height: 586px
+	border: 7px solid $white
+	box-shadow: 0px 10px 30px #000
+	// .map-popup__window
+	&__window
+
+.info-wrapper
+	background: #fff url('../imges/background/main-bg.jpg') 
+	+row-flex
+	margin-bottom: 36px
+	padding: 40px 0 35px 80px
+	position: relative
+	+md-block
+		padding-left: 0
+		padding-right: 0
+		justify-content: space-around
+	+xs-block
+		margin-bottom: -1px
+		padding: 0
+	&:after
+		content: ('')
+		display: block
+		position: absolute
+		z-index: 5
+		width: 8px
+		height: 278px
+		background: url('../imges/main/decor.png') 0 0 no-repeat
+		top: calc(50% - (278px/2))
+		left: calc(50% - 4px)
+		+md-block
+			display: none
+
+		
+
+
+
+.news
+	+size(6)
+	+size-xs(12)
+	+xs-block
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+		align-items: center
+		padding-top: 80px
+	&__heading
+		margin-bottom: 33px
+		+xs-block
+			font-size: 33px
+		// margin-bottom: 25px		
+
+	&__item
+		margin-bottom: 29px
+		max-width: 350px
+		+sm-block
+			max-width: 350px
+		+xs-block
+			max-width: 300px
+.new
+	&__text
+		margin-bottom: 6px
+	&__date
+		display: block
+		text-transform: lowercase
+	&__btn
+		+xs-block
+			max-width: 400px
+			width: 90%
+			margin-top: 20px
+
+
+
+
+.gallery
+	+size(6)
+	+size-xs(12)
+	max-width: 300px
+	margin: 0 auto
+	+md-block
+		margin: 0
+		max-width: 400px
+	+xs-block
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+		align-items:center
+		justify-content: center
+		padding-top: 80px
+	// .gallery__heading
+	&__heading
+		margin-bottom: 38px
+		+xs-block
+			font-size: 33px
+		// margin-bottom: 25px
+	// .gallery__slider
+	&__slider
+		margin-bottom: 40px
+		border: 7px solid $white
+		+md-block
+			margin-bottom: 25px
+	.gallery__controls
+		justify-content: space-between
+
+.slick-slide img
+	width: 100%
+
+.slider
+	// .slider__item
+	&__item
+		// width: 100%
+	// .slider__img
+	&__img
+		object-fit: cover
+		// width: 100%
+.gallery-next,
+	margin-left: 20px
+	+sm-block
+		margin-left: 0
+.gallery-next, .gallery-prev
+	+md-block
+		width: 45%
+
+.contact
+	+size(6)
+	+size-xs(12)
+	+xs-block
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+		align-items: center
+		padding-top: 80px
+
+	// .contact__heading
+	&__heading
+		margin-bottom: 34px
+		+xs-block
+			font-size: 33px
+		// margin-bottom: 25px
+		@extend .heading
+	// .contact__address
+	&__address
+		@extend .text
+		margin-bottom: 32px
+	// .contact__phone
+	&__phone
+		@extend .text
+	// .contact__time
+
+	&__time
+		@extend .text
+		display: block
+		margin-bottom: 28px
+	&__btns
+		+md-block
+			width: 100%
+			max-width: 400px
+			justify-content:  space-between
+		// +xs-block
+	&__btn-1
+		+md-block
+			width: 45%
+
+	&__btn-2
+		margin-left: 20px
+		+md-block
+			width: 45%
+			margin-left: 0
+.contact__phone[href^="tel:"] 
+	color: $black
+	text-decoration: none
+
+
+.booking
+	+size(6)
+	+size-xs(12)
+	max-width: 300px
+	margin: 0 auto
+	+md-block
+		margin: 0
+		max-width: 400px
+	+xs-block
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-direction: column
+		align-items:center
+		padding-top: 80px
+		padding-bottom: 40px
+	// .booking__heading
+	&__heading
+		margin-bottom: 34px
+		+xs-block
+			font-size: 33px
+		// margin-bottom: 25px
+	&__text
+		margin-bottom: 24px
+
+.form-booking
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	// .form-booking__div
+	&__div
+		min-width: 143px
+		+size(6)
+		+md-block
+			width: calc(50%	- 14px)
+			min-width: 120px
+		+xs-block
+			width: 90%
+			margin: 0 auto
+
+		&:last-child
+			width: 100%
+			+xs-block
+				width: 90%
+		&:nth-child(even)
+			margin-left: 14px
+			margin-bottom: 16px
+			+xs-block
+				margin-left: 0px
+				margin-bottom: 0px
+				margin: 0 auto
+
+	
+	// .form-booking__label
+	&__label
+		@extend .text
+		display: block
+		line-height: 1em
+		margin-bottom: 14px
+		padding-left: 17px
+		+xs-block
+			padding: 0
+	// .form-booking__input
+	&__input
+		width: 100%
+		background: transparent
+		+md-block
+			text-align: center
+			padding-left: 5px
+			padding-right: 5px
+		+xs-block
+			margin-bottom: 30px
+
+	// .form-booking__btn
+	&__btn
+		width: 100%
+		margin-top: 4px
+		+xs-block
+			margin-bottom: 30px
+
+

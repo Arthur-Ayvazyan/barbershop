@@ -1,0 +1,327 @@
+.shop
+	padding-bottom: 50px
+	+md-block
+		padding: 0 15px
+.shop-block
+	+row-flex()
+.side-bar
+	width: 240px
+
+	+md-block
+		width: 100%
+	// .side-bar__button
+	&__button
+		// display: none
+		cursor: pointer
+		background: url('../imges/svg/filter.svg') -8px -1px / 40px 40px no-repeat
+		border: 1px solid $grey
+		border-left: none
+		border-right: none
+		padding-left: 35px
+		padding: 15px 0
+		width: 100%
+		height: 30px
+		line-height: 30px
+		font-size: 22px
+		text-transform: uppercase
+		display: none
+		+md-block
+			display: block
+			// font-size: 30px
+		
+	// .side-bar__form
+	&__form
+		display: flex
+		flex-direction: column
+		+md-block
+			flex-direction: column-reverse
+			justify-content: flex-end
+			// overflow-y: scroll
+	
+			// display: none
+
+.form-block
+	+md-block
+		position: fixed
+		z-index: 9999
+		width: 100vw
+		height: 100vh
+		top: 100vh
+		left: 0
+		background: lighten($grey, 24)
+		transition: top .3s ease-in-out
+		overflow-y: scroll
+		padding-top: 60px
+
+.filters
+	+md-block
+		background: #fff
+		padding: 15px 15px
+		order: 1
+	&:first-child
+		margin-bottom: 57px
+		+md-block
+			order: 2
+			margin-bottom: 20px
+	// .filters__heading
+	&__heading
+		@extend .text
+		font-size: $heading-2
+		margin-bottom: 36px
+		+md-block
+			font-size: $heading-2
+
+	// .filters__item
+	&__item
+
+
+.filter
+	display: flex
+	// align-items: center
+	margin-bottom: 17px
+	&:last-child
+		margin-bottom: 10px
+		+md-block
+			margin-bottom: 0
+	// .filter__checkbox
+	&__checkbox
+		display: none
+	// .filter__label
+	&__label
+		cursor: pointer
+		position: relative
+		display: flex
+		align-items: center
+		@extend .text
+		line-height: 1em
+		&:hover
+			color: $brown
+	// .filter__radio
+	&__radio
+		display: none
+
+	
+
+.filter-btn
+	display: flex
+	justify-content: space-between
+	align-items: center
+	width: 240px
+	order: 6
+	margin-top: 20px
+	+md-block
+		margin-top: 0
+		padding: 10px 25px 10px 15px
+		width: 100%
+		margin-bottom: 20px
+		background: #fff
+	// .filter-btn__close
+	&__close
+		cursor: pointer
+		width: 40px
+		height: 40px
+		background: url('../imges/svg/cross.svg') center center / 25px 25px no-repeat
+		// background-color: #000
+		border: none
+		display: none
+		transition: .2s
+		&:hover
+			background: url('../imges/svg/cross-black.svg') center center / 25px 25px no-repeat
+
+		+md-block
+			display: block
+	// .filter-btn__show
+	&__show
+		+md-block
+			background: none
+			color: $grey
+			font-size: 18px
+			border: none
+			width: auto
+.btn	
+	// .btn_middle
+	&_middle
+
+
+.goods
+	flex: 1 1 auto
+	align-self: flex-start
+
+.good-container
+	max-width: 700px
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	align-items: stretch
+	+md-block
+		max-width: 100%
+		margin-top: 40px
+		justify-content: center
+	+sm-block
+		justify-content: center
+.good-wrapper
+	padding: 0 10px
+	margin-bottom: 20px
+	display: flex
+	// justify-content: center
+	// align-items: center
+	+size(4)
+	flex: 1 1 25%
+	+sm-block
+		+size(3)
+		flex: 1 1 33.3333%
+		min-width: 240px
+		padding: 0 5px
+		margin-bottom: 10px
+	+xs-block
+		+size(12)
+		flex: 1 1 50%
+		max-width: 90%
+
+.good
+	position: relative
+	background: $white
+	box-shadow: 0px 0px 10px darken($grey, 10)
+	display: flex
+	flex-direction: column
+	width: 100%
+	&:before, &:after
+		text-align: center
+		font-size: 14px
+		color: white
+		line-height: 20px
+		text-transform: uppercase
+		display: block
+		position: absolute
+		width: 25%
+		height: 20px
+		border-radius: 4px
+		font-weight: 700
+		z-index: 2
+		display: none
+	&__link
+		display: block
+		position: absolute
+		width: 100%
+		height: 75%
+		z-index: 3
+		
+
+	&:before
+		content: ('new')
+		top: 5px
+		left: 5px
+		background: darken(lightgreen, 50)
+
+	&:after
+		content: ('sale')
+		top: 5px
+		right: 5px
+		width: 25%
+		background: darken(red, 10)
+.good-bg
+	// .good-bg__item
+	margin-bottom: 16px
+	width: 100%
+	&__item
+		width: 100%
+	
+
+.good-text
+	flex: 1
+	margin-bottom: 17px
+	padding: 0 16px
+	@extend .text
+	+md-block
+		text-align: center
+		font-size: 20px
+	// .good-text__discr
+	&__discr
+		text-transform: lowercase
+	// .good-text__brand
+	&__brand
+		text-transform: uppercase
+
+.good-btn
+	margin-bottom: 16px
+	padding: 0 16px
+	display: flex
+	justify-content: center
+	// .good-btn_price
+	&_price
+		font-size: $text
+		text-transform: uppercase
+		font-family: PTsans-Bold
+		color: $text-color
+		padding:  14.5px 0 15.5px 0
+		cursor: pointer
+		transition: .3s
+		border: none
+		width: 109px
+		background: $grey
+		position: relative
+		// text-decoration: solid line-through #000
+		&:after
+			content: ('300₽')
+			color: red
+			font-size: 20px
+			// display: inline-block
+			margin-left: 5%
+			display: none
+
+	// .good-btn_buy
+	&_buy
+		font-size: $text
+		text-transform: uppercase
+		font-family: PTsans-Bold
+		color: $text-color
+		padding:  14.5px 0 15.5px 0
+		cursor: pointer
+		transition: .3s
+		border: none
+		width: 78px
+		background: #000
+		&:hover, &:focus
+			background: $brown
+.pages
+	width: 100%
+	padding: 0 10px
+	height: 43px
+	margin-top: 40px
+	margin: 20px auto 0 auto
+	+md-block
+		margin-bottom: 40px
+	+sm-block
+		padding: 0
+	+xs-block
+		width: 90%
+	&__item
+		height: 43px
+		display: flex
+		flex-wrap: wrap
+		+md-block
+			margin-left: 0 
+			padding-left: 4px
+			justify-content: center
+.page
+	width: 43px
+	height: 43px
+	background: #000
+	color: #fff
+	text-align: center
+	line-height: 40px
+	font-size: 15px
+	margin-right: 7px
+	cursor: pointer
+	transition: .3s
+	+md-block
+	&:hover
+		background: $brown
+	&.active
+		background: $white
+		color: $black
+
+// styling of close, open, filter buttons >> done
+// styling of radio and chackbox buttons  >> done
+// creating of good cards 
+// createng of pages paginations

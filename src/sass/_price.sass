@@ -1,0 +1,149 @@
+.price-main
+	+md-block
+		padding: 0 15px
+	+xs-block
+		padding: 0
+.price-title
+	+row-flex()
+	align-items: center
+	// .title-big__text
+	&:after, &:before 
+		content: ('')
+		display: block
+		height: 2px
+		flex: 1 1 auto
+		background: #000
+		+xs-block
+			display: none
+	&__text
+		+adaptiv-font(48, 24)
+		font-family: PTsans
+		line-height: 48px
+		font-weight: 700
+		color: #000000
+		padding: 0 25px
+		+xs-block
+			margin: 0 auto
+			padding: 0
+.price-content
+	padding: 73px 0 82px
+	+row-flex()
+	justify-content: space-between
+	+sm-block
+		justify-content: center
+	// .price-content__title
+	&__title
+		@extend .text
+		font-size: $heading-2
+		line-height: 30px
+		margin-bottom: 40px
+		+md-block
+			font-size: 20px
+			margin-bottom: 50px
+		+xs-block
+			margin-bottom: 30px
+
+
+.equipment .price-content__title
+	width: 60%
+	+md-block
+		width: 100%
+	+sm-block
+		text-align: center
+		// text-align: ce
+.price .price-content__title
+	width: 40%
+	+md-block
+		width: 100%
+		text-align: right
+	+sm-block
+		text-align: center
+.about .price-content__title
+	+md-block
+		text-align: center
+	+sm-block
+		text-align: center
+
+.equipment
+	+size(6)
+	margin-bottom: 70px
+	+sm-block
+		+size(12)
+		+sm-block
+
+.equipment-list
+	// .equipment-list__item
+	+sm-block
+		margin: 0 auto	
+		flex-direction: column
+		display: flex
+		align-items: center
+
+	&__item
+		@extend .text
+		margin-bottom: 30px
+		position: relative
+		line-height: 1em
+		padding-left: 22px
+		// width: 80%
+		&:before
+			@extend .cube-decor
+			top: 1.5px
+			left: 2px
+		&:last-child
+			margin-bottom: 0
+
+
+.price
+	+size(6)
+	margin-bottom: 70px
+	+md-block
+		margin-bottom: 90px
+	+sm-block
+		+size(12)
+		+sm-block
+
+		
+.price-list
+	// .price-list__name
+	width: 100%
+	+sm-block
+		width: 80%
+		margin: 0 auto
+	+xs-block
+		width: 90%
+	&__item
+		@extend .text
+		line-height: 1
+		padding: 16px 0px 17px
+		width: 50%
+		&:nth-child(odd)
+			padding-left: 19px
+		&:nth-child(even)
+			text-align: center
+
+
+.about
+	+size(12)
+	&:last-child
+		margin-bottom: 0
+	&__wrapper
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+	
+	&__text
+		@extend .text
+		width: 380px
+		+md-block
+			margin: 0 auto
+			margin-bottom: 60px
+			width: 80%
+			font-size: 15px
+			text-align: center
+		+xs-block
+			width: 100%
+			margin-bottom: 50px
+		&:last-child
+			margin-bottom: 0
+

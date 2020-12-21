@@ -1,0 +1,270 @@
+$maxWidth: 1367
+=adaptiv-font($pcSize, $mobSize) 
+	$addSize: $pcSize - $mobSize
+	$maxWidth: $maxWidth - 320
+	font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}))
+
+
+* 
+	box-sizing: border-box
+	margin: 0
+	padding: 0
+
+body
+	position: relative
+	margin: 0
+	font-family: 'PTsans', sans-serif
+	font-size: 14px
+	background: url('../imges/background/main-bg.jpg') 0 0 
+main
+	position: relative
+	z-index: 14
+	&:after
+		content: ('')
+		position: absolute
+		display: block
+		z-index: 3
+		width: 100%
+		height: 55px
+		left: 0
+		bottom: 0
+		// top: -8px
+		background: url('../imges/background/main-bg.jpg') 
+	&:before
+		content: ('')
+		position: absolute
+		display: block
+		z-index: 3
+		width: 100%
+		height: 0px
+		left: 0
+		bottom: 0
+		box-shadow: 0px 8px 25px 8px #000
+	
+img
+	max-width: 100%
+
+input:focus, button:focus, input, button
+	outline: none
+	// border: none
+label
+	position: relative
+	&::before, &::after
+		transition: opacity .2s ease-in-out
+li
+	list-style-type: none
+a 
+	text-decoration: none
+table, th, td 
+  border: 2px solid $black-border
+  border-collapse: collapse
+
+input[type="checkbox"] + label::before
+	content: ('')
+	display: block
+	margin-right: 23px
+	width: 16px
+	height: 16px
+	border: 2px solid #000
+
+input[type="checkbox"] + label::after
+	content: ('')
+	display: block
+	position: absolute
+	width:  16px
+	height: 16px
+	left: 1.7px
+	background:  url('../imges/svg/cross-black.svg') center / 80%  no-repeat
+	opacity: 0
+
+input[type="checkbox"]:checked + label::after
+	opacity: 1
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+input[type="radio"] + label::before
+	content: ('')
+	display: block
+	margin-right: 23px
+	width: 16px
+	height: 16px
+	border: 2px solid #000
+	border-radius: 50%
+
+input[type="radio"] + label::after
+	content: ('')
+	display: block
+	position: absolute
+	margin-right: 23px
+	width:  8px
+	height: 8px
+	left: 5.8px
+	top: 5.8px
+	background: #000
+	border-radius: 50%
+	opacity: 0
+
+input[type="radio"]:checked + label::after
+	opacity: 1
+
+//////////////////////////////////////////////////////////////////////////////////// 
+input[type="checkbox"]:checked + label
+	cursor: pointer
+	color: $brown
+
+input[type="radio"]:checked + label
+	color: $brown
+
+input:disabled + label
+	opacity: .3
+	&:hover
+		color: $black
+		cursor: auto 
+/////////////////////////////////////////////////////////////////////////////////////
+
+.modal
+	top: 0
+	left: 0 
+	+xs-block
+		padding-top: 40px
+	
+.popup
+	position: relative
+	+xs-block
+		width: 90vw	
+	&__closer
+		position: absolute
+		width: 25px
+		height: 25px
+		background: #000
+		right: -42px
+		top: 8px
+		background: url('../imges/svg/cross.svg') 0 0 / cover no-repeat
+		transition: background .3s
+		&:hover,
+			background: url('../imges/svg/cross-hover.svg') 0 0 / cover no-repeat
+.container
+	+wrapper
+
+.header
+	// .header__title
+	padding: 56px 0 59px
+	padding-top: 136px
+	+md-block
+		padding-left: 15px
+		padding-right: 15px
+	&__content
+		+row-flex()
+		flex-direction: column
+	&__title
+		@extend .heading
+		margin-bottom: 30px
+	// .header__links
+	&__links
+		display: flex
+		flex-wrap: wrap
+	// .header__link
+	&__link
+		@extend .text
+		color: $black
+		margin-right: 40px
+		cursor: poiner
+		position: relative
+		&:after	
+			right: -26px
+			top: 8px
+			@extend .cube-decor
+			cursor: auto
+		&:last-child
+			margin-right: 0
+			color: $grey
+			cursor: auto
+			&:after
+				display: none
+
+.cube-decor
+	content: ('')
+	display: block
+	position: absolute
+	width: 9px
+	height: 9px
+	background: #000
+	transform: rotate(45deg)
+
+// .main-bg
+// 	background: #fff url('../imges/background/main.bg.jpg') 
+.title
+	font-size: $heading-1
+	font-family: PTsans-Bold
+
+.heading
+	font-size: $heading-1
+	font-family: PTsans-Bold
+	color: $black
+	
+
+.text
+	font-size: $text
+	text-transform: uppercase
+	font-family: PTsans-Bold
+	line-height: 24px
+	font-weight: 700
+	font-style: normal
+	+md-block
+		font-size: 16px
+
+.input
+	font-size: $text
+	text-transform: uppercase
+	font-family: PTsans-Bold
+	border: 3px solid $black-border
+	padding: 16px 5px 15px 17px
+	transition: .3s
+	&:hover, &:focus
+		border-color: $brown
+
+.check-box
+	border: 3px solid $black-border
+
+.label	
+	border: 3px solid $black-border
+	text-transform: uppercase
+	&:hover, &:focus
+		background-color: $brown
+		border: 3px solid $brown
+
+.buttons
+	display: flex
+	flex-wrap: wrap
+	
+.btn
+	display: block
+	font-size: $text
+	text-transform: uppercase
+	font-family: PTsans-Bold
+	border: 3px solid $black-border
+	background: $black
+	color: $text-color
+	padding:  14.5px 0 15.5px 0
+	cursor: pointer
+	transition: .3s
+	&:hover
+		background-color: $brown
+		border: 3px solid $brown
+
+.btn_middle
+	@extend .btn
+	width: 140px
+
+
+//  adding classes by javascript
+.show
+	display: block
+	overflow-y: scroll
+.rotate
+	transform: rotate(-180deg)
+.scroll-hidden
+	overflow: hidden
+
+//
+
